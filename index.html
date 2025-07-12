@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gift Letter Reveal</title>
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Georgia', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .letter {
+      background: white;
+      padding: 30px;
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      border: 2px solid #ff69b4;
+      text-align: center;
+      display: none;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      color: #ff1493;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #333;
+      font-size: 18px;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    .heart {
+      font-size: 30px;
+      margin-top: 20px;
+      animation: beat 1s infinite;
+      color: red;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="revealLetter()">🥰 Click me🥰</button>
+
+  <div class="letter" id="giftLetter">
+    <h1>Hi🖐🏻,</h1>
+    <p>
+    <br><br>
+      RG💖
+    </p>
+    <div class="heart">💖</div>
+  </div>
+
+  <script>
+    function revealLetter() {
+      document.getElementById('giftLetter').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
